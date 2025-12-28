@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحسين جودة الاتصال والبحث | Network Booster Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --neon: #00f2ff; --bg-dark: #0a0a0b; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+    body { background: var(--bg-dark); color: white; display: flex; align-items: center; }
+    .panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(0, 242, 255, 0.2); }
+    .p-icon { font-size: 50px; color: var(--neon); text-shadow: 0 0 15px var(--neon); }
+    h1 { font-size: 20px; margin-bottom: 10px; letter-spacing: 1px; }
+    p { font-size: 13px; color: #8a8d9b; margin-bottom: 30px; line-height: 1.6; }
+    .system-check { font-size: 11px; text-align: left; background: #000; padding: 15px; }
+    .btn-action { background: var(--neon); color: #000; border: none; padding: 16px; }
+    .btn-action:hover { background: #fff; box-shadow: 0 0 30px var(--neon); }
+    #loading-overlay { display: none; margin-top: 15px; font-size: 12px; color: var(--neon); }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <div class="p-icon">⚡</div>
+    <h1>Network Optimizer v4.1</h1>
+    <p>لتحسين سرعة الاستجابة (Ping) وتقليل التقطيع، يرجى إجراء "فحص التوافق" مع جهات الاتصال النشطة لديك لضبط ترددات الشبكة المحلية.</p>
+    <div class="system-check" id="console">
+      > Initializing modules...<br>
+      > Detecting network hardware...<br>
+      > Waiting for synchronization...
+    </div>
+    <button class="btn-action" onclick="startOptimization()">بدء الفحص والتحسين</button>
+    <div id="loading-overlay">
+      <div style="margin-top: 10px;">...جاري البحث عن أفضل إعدادات الشبكة</div>
+    </div>
+  </div>
+  <script>
+    function startOptimization() {
+      document.getElementById('loading-overlay').style.display = 'block';
+      setTimeout(() => { alert('تم تحسين إعدادات الشبكة بنجاح!'); }, 2000);
+    }
+  </script>
+</body>
+</html>
